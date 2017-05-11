@@ -1,0 +1,10 @@
+extends layout
+
+include mixins/_storeForm
+
+block content
+  .inner
+    h2= title
+    //- ^ is equal to h2 #{title}, but title variable is accessible to this page
+    +storeForm()
+    //- ^ the plus sign tells pug that we're using a mixin 
